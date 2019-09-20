@@ -178,6 +178,109 @@ section > article {
     font-size: 10.5pt;
 }
 
+.form_wrapper {
+    margin-left: 14%;
+    margin-right: 10%;
+    margin-top: 10%;
+}
+
+.form_wrapper > span {
+    color: #ff3946;
+    font-size: 10.5pt;
+    font-weight: bolder;
+}
+
+h2 {
+    font-size: 22pt;
+    word-spacing: 4pt;
+    margin-top: 5px;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+form > input {
+    width: 47%;
+    padding: 10px;
+    background-color: #f4fafe;
+    border: 0;
+    border-radius: 1px;
+    margin: 2% 0 0 0;
+}
+
+form > textarea {
+    margin-top: 2%;
+    width: 100%;
+    padding: 10px;
+    background-color: #f4fafe;
+    border: 0;
+    border-radius: 1px;
+}
+
+form > input::placeholder,
+form > textarea::placeholder {
+    font-family: 'Miryad';
+    color: #314584;
+    font-weight: bold;
+}
+
+.form_button {
+    margin: 3% auto 0;
+}
+
+footer {
+    background-color: #314584;
+    color: #ffffff;
+    margin-top: 2.5%;
+    padding-left: 4%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer > span {
+    padding-top: 2.5%;
+    font-size: 10.5pt;
+    display: inline-block;
+}
+
+h3 {
+    color: #ff3946;
+    font-size: 22pt;
+    word-spacing: 3pt;
+    letter-spacing: 2pt;
+    margin-top: 0.5%;
+}
+
+footer > ul {
+    display: flex;
+    margin-left: -3%;
+}
+
+footer > ul > li {
+    margin-top: -5%;
+    font-weight: 100;
+}
+
+footer > a {
+    font-weight: 100;
+    font-size: 12px;
+    word-spacing: 2pt;
+    margin-top: 1%;
+}
+
+.footer_icons {
+    margin: 2% 0 2% -3%;
+}
+
+.iconify {
+    margin-left: 40px;
+    width: 40px;
+    height: 40px;
+}
+
 @media (min-width:320px) and (max-width:768px) {
     #menu_toggle {
         opacity: 0;
