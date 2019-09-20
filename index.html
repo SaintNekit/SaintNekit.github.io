@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="index.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
@@ -11,57 +11,60 @@
 </head>
 <body>
     <wrapper>
-        <div class="logo">
-            <img src="assets/Logo@1X.png" class="header_logo">
-        </div>    
-        <header>    
-            <div class="menu">
-                <input id="menu_toggle" type="checkbox" />
-                <label class="menu_btn" for="menu_toggle">
-                    <span></span>
-                </label>
-                <ul class="menu_box">
-                    <li class="menu_item">Home.</li>
-                    <li class="menu_item">About us.</li>
-                    <li class="menu_item">Portfolio.</li>
-                    <li class="menu_item">Blog.</li>
-                    <li class="menu_item">Contact us.</li>
-                    <li class="menu_item lang_EN extra_item">EN</li>
-                </ul>
-            </div>
-            <div class="lang_menu">
-                <span class="lang_EN">EN</span>
-                <span class="contact">Contact Us</span>
-            </div>
-        </header>
-        <main>
-            <div class="info">
-                <h1>The Spirit of Digital Agency.</h1>
-                <article>Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. 
-                         Nulla porttitor accumsan tincidunt.
-                </article>
-                <div class="main_info-buttons">
-                    <button class="main_button">More about us</button>
-                    <a>Get in Touch</a>
-                </div>
-            </div>
-            <div class="slider">
-                <div><img src="./assets/Vector Illustration@1X.png" class="slider_img"></div>
-                <div><img src="./assets/Vector Illustration@1X.png" class="slider_img"></div>
-            </div>
-        </main>
-        <section class="examples">
-            <span>See some of our Creative work.</span>
-            <div class="section_blocks">
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
-            </div>
-            <article>See More of These.</article>
-        </section>
+      <header class="header">
+        <img class="logo" src="assets/Logo@1X.png" class="header_logo" />
+        <div class="menu">
+          <input id="menu_toggle" type="checkbox" />
+          <label class="menu_btn" for="menu_toggle">
+            <span></span>
+          </label>
+          <ul class="menu_box">
+            <li class="menu_item">Home.</li>
+            <li class="menu_item">About us.</li>
+            <li class="menu_item">Portfolio.</li>
+            <li class="menu_item">Blog.</li>
+            <li class="menu_item">Contact us.</li>
+            <li class="menu_item lang extra_item">EN</li>
+          </ul>
+        </div>
+        <div class="lang_menu">
+          <span class="lang_EN">EN</span>
+          <span class="contact">Contact Us</span>
+        </div>
+      </header>
+      <div class="main">
+        <div class="info">
+          <h1 class="title">The Spirit of Digital Agency.</h1>
+          <article>
+            Vestibulum ac diam sit amet quam vehicula elementum amet est on dui.
+            Nulla porttitor accumsan tincidunt.
+          </article>
+          <div class="main_info-buttons">
+            <button class="main_button">More about us</button>
+            <a>Get in Touch</a>
+          </div>
+        </div>
+        <div class="slider">
+          <div>
+            <img src="./assets/Vector Illustration@1X.png" class="slider_img" />
+          </div>
+          <div>
+            <img src="./assets/Vector Illustration@1X.png" class="slider_img" />
+          </div>
+        </div>
+      </div>
+      <section class="examples">
+        <span class="title">See some of our Creative work.</span>
+        <div class="section_blocks">
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+        </div>
+        <article>See More of These.</article>
+      </section>
         <div class="form_wrapper">
             <span>CONTACT US</span>
             <h2>Get in Touch</h2>
@@ -94,10 +97,25 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="./assets/slider/slick-1.8.1/slick/slick.min.js"></script>
     <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-          $('.slider').slick();
+    <script>
+        $(document).ready(function() {
+        $(".slider").slick({
+            width: '300px',
+          adaptiveHeight: true,
+          responsive: [
+            {
+              breakpoint: 780,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+            {
+              breakpoint: 320,
+              settings: "unslick"
+            }
+          ]
         });
+      });
     </script>
 </body>
 </html>
