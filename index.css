@@ -133,6 +133,7 @@
       letter-spacing: 2pt;
       text-align: center;
       font-weight: bold;
+      line-height: 30pt;
     }
   
     .main > div > article {
@@ -262,7 +263,7 @@
       top: 0;
       left: -100%;
       width: 65%;
-      height: 25%;
+      height: 45%;
       margin: 0;
       padding: 80px 0;
       list-style: none;
